@@ -3,7 +3,6 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.avif";
 
 const avatarSrcs: Array<string> = [
@@ -29,11 +28,6 @@ const avatarSrcs: Array<string> = [
     primaryBtnURL="/products"
     secondaryBtn="Contact Sales Team"
     secondaryBtnURL="/contact"
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
     src={heroImage}
     alt="Stack of ScrewFast product boxes containing assorted hardware tools"
   />

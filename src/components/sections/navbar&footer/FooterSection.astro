@@ -1,10 +1,8 @@
 ---
 // Import the necessary dependencies
-import FooterSocialLink from "@components/ui/links/FooterSocialLink.astro";
 import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro";
 import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
-import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
 import { SITE } from "@data/constants";
 
@@ -28,7 +26,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
         <BrandLogo class="h-auto w-32" />
       </div>
       <!-- An array of links for Product and Company sections -->
-      {
+      <!-- {
         strings.footerLinks.map((section) => (
           <div class="col-span-1">
             <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
@@ -53,7 +51,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
             </ul>
           </div>
         ))
-      }
+      } -->
 
       <div class="col-span-2">
         <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
@@ -85,7 +83,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
       </div>
 
       <!-- Social Brands -->
-      <div>
+      <!-- <div>
         <FooterSocialLink url={strings.socialLinks.facebook}
           ><Icon name="facebookFooter" />
         </FooterSocialLink>
@@ -106,7 +104,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
           ><Icon name="slackFooter" />
         </FooterSocialLink>
       </div>
-    </div>
+    </div> -->
 
     <script>
       const year = new Date().getFullYear();
