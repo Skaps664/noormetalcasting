@@ -19,7 +19,8 @@ const {
   rating,
   reviews,
   src,
-  alt
+  alt,
+  info
 } = Astro.props;
 
 // Define TypeScript interface for props
@@ -37,6 +38,7 @@ interface Props {
   reviews?: string;
   src?: any;
   alt?: string;
+  info: string;
 }
 ---
 
@@ -74,6 +76,17 @@ interface Props {
     { withReview ? (
     <ReviewComponent avatars={avatars} starCount={starCount} rating={rating} reviews={reviews} />
     ) : "" }
+
+
+{info &&
+  <p
+    class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5"
+  >
+    {info}
+  </p>
+}
+
+
 
   </div>
   <!-- Hero Image Section -->
