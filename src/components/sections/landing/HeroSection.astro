@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
-import { number } from "astro/zod";
+
 
 // Define props from Astro
 const {
@@ -41,9 +41,9 @@ interface Props {
   reviews?: string;
   src?: any;
   alt?: string;
-  phone: string;
-  mail: string;
-  address: string;
+  phone?: string;
+  mail?: string;
+  address?: string;
 
 }
 ---
@@ -82,25 +82,28 @@ interface Props {
     { withReview ? (
     <ReviewComponent avatars={avatars} starCount={starCount} rating={rating} reviews={reviews} />
     ) : "" }
-<p><br><br></p>
+<br><br>
 
-{phone &&
+{
   <p
     class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5"
   >
+    
+    Phone/WhatsApp No : <br>
     {phone}
   </p>
   <p
     class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5"
   >
-    {mail}
+    Mail : <br>
+    {mail} 
   </p>
   <p
     class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5"
   >
+    Address : <br>
     {address}
   </p>
-
 }
 
 
@@ -113,7 +116,7 @@ interface Props {
 	<Image
         src={src}
         alt={alt}
-        class="h-full w-full object-cover object-center rounded-lg"
+        class="h-full w-full object-cover object-center rounded-xl"
         draggable={"false"}
         loading={"eager"}
         format={"avif"}
