@@ -23,11 +23,11 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
     <div class="flex items-center justify-between">
       <!-- Brand logo -->
       <a
-        class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
+        class="flex-none rounded-lg text-xl text-white font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
         href={homeUrl}
         aria-label="Brand"
       >
-        <BrandLogo class="h-auto w-28" />
+        Noor Metal Casting
       </a>
       <!-- Collapse toggle for smaller screens -->
       <div class="ml-auto mr-5 md:hidden">
@@ -89,7 +89,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         ))} -->
 
         <!-- <Authentication /> -->
-        <LanguagePicker />
+        <!-- <LanguagePicker /> -->
         <!-- ThemeIcon component specifically for larger screens -->
         <span class="hidden md:inline-block">
            <ThemeIcon />
